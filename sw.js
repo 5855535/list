@@ -1,10 +1,11 @@
-const CACHE_NAME = 'lista-compras-v1';
+const CACHE_NAME = 'lista-compras-v2';
 const urlsToCache = [
   './',
   './index.html',
   './style.css',
   './app.js',
-  './manifest.json'
+  './manifest.json',
+  './logo.png'
 ];
 
 self.addEventListener('install', event => {

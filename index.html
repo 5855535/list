@@ -6,21 +6,24 @@
     <title>Lista de Compras</title>
     <link rel="stylesheet" href="style.css">
     
-    <!-- === PWA Configuración === -->
-     <link rel="icon" type="image/png" href="image/logo.pngg">
+    <!-- PWA Configuración CORREGIDA -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#5d574f">
+    
+    <!-- Meta tags Apple (corregido) -->
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Lista de Compras">
-    
+
     <!-- Logo -->
-    <link rel="icon" href="image/logo.png" type="image/png">
-    <link rel="apple-touch-icon" href="image/logo.png">
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="logo.png">
 </head>
 <body>
     <div class="main-frame">
-        
+        <!-- Logo -->
+
         <div class="deco broccoli">🥦</div>
         <div class="deco cheese">🧀</div>
         <div class="deco apple">🍎</div>
@@ -40,12 +43,11 @@
 
     <script type="module" src="app.js"></script>
 
-    <!-- Service Worker -->
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js')
-                .then(reg => console.log('✅ Service Worker registrado'))
-                .catch(err => console.log('❌ Error SW:', err));
+                .then(() => console.log('✅ Service Worker registrado'))
+                .catch(err => console.error('❌ Service Worker error:', err));
         }
     </script>
 </body>

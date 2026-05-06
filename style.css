@@ -1,0 +1,150 @@
+:root {
+    --bg-color: #fcf5eb;
+    --line-color: #5d574f; /* Color marrón oscuro de los bordes de la imagen */
+    --item-bg: #ffffff;
+    --checked-bg: #f9f9f9;
+}
+
+body {
+    background-color: #e8e1d5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Comic Sans MS', 'Verdana', sans-serif;
+}
+
+.main-frame {
+    background-color: var(--bg-color);
+    width: 90%;
+    max-width: 420px;
+    padding: 50px 25px;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border: 3px solid var(--line-color);
+}
+
+/* Decoraciones (No bloquean clics) */
+.deco {
+    position: absolute;
+    font-size: 2.2rem;
+    pointer-events: none;
+    z-index: 10;
+    filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.1));
+}
+.broccoli { top: 15px; left: 15px; transform: rotate(-10deg); }
+.cheese { top: 15px; right: 20px; transform: rotate(15deg); }
+.apple { right: -15px; top: 40%; transform: rotate(5deg); }
+.tomato { right: 15px; bottom: 20px; transform: rotate(-10deg); }
+.bread { bottom: 15px; left: 20px; transform: rotate(-5deg); }
+.banana { left: -15px; top: 30%; transform: rotate(-20deg); }
+
+h1 {
+    text-align: center;
+    color: var(--line-color);
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    z-index: 20;
+    position: relative;
+}
+
+#itemInput {
+    flex: 1;
+    border: 3px solid var(--line-color);
+    background: white;
+    border-radius: 15px;
+    padding: 12px;
+    font-family: inherit;
+    outline: none;
+}
+
+#addButton {
+    background: #ffcc80;
+    border: 3px solid var(--line-color);
+    border-radius: 15px;
+    padding: 0 20px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--line-color);
+}
+
+/* LA LISTA ESTILO IMAGEN */
+#shoppingList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 3px solid var(--line-color);
+    border-radius: 15px;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid var(--line-color);
+    min-height: 55px;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+.check-box-container {
+    width: 55px;
+    height: 55px;
+    border-right: 3px solid var(--line-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.item-text {
+    padding: 0 15px;
+    flex: 1;
+    color: var(--line-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.delete-btn {
+    width: 55px;
+    height: 55px;
+    background: transparent;
+    border: none;
+    border-left: 3px solid var(--line-color);
+    color: #e57373;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    accent-color: var(--line-color);
+}
+
+.checked {
+    background-color: #f0f0f0;
+}
+
+.checked .item-text {
+    text-decoration: line-through;
+    color: #b0b0b0;
+}

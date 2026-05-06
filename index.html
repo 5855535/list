@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- PWA -->
+      <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#5d574f">
+</head>
+<body>
+    <div class="main-frame">
+        <div class="deco broccoli">🥦</div>
+        <div class="deco cheese">🧀</div>
+        <div class="deco apple">🍎</div>
+        <div class="deco bread">🥖</div>
+        <div class="deco banana">🍌</div>
+        <div class="deco tomato">🍅</div>
+
+        <h1>Lista de compras</h1>
+        
+        <div class="input-section">
+            <input type="text" id="itemInput" placeholder="Añadir artículo...">
+            <button id="addButton">+</button>
+        </div>
+
+        <ul id="shoppingList"></ul>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
